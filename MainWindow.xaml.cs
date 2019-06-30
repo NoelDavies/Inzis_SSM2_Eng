@@ -96,7 +96,7 @@ namespace Inzis_SMM2_Tool
               this._client.SendMessage(((ChatMessage) e.ChatMessage).get_Channel(), "@" + ((TwitchLibMessage) e.ChatMessage).get_Username() + " you already have " + (object) Settings.IDCount + " ID(s) in the database!", false);
               break;
             case 1:
-              this._client.SendWhisper(((TwitchLibMessage) e.ChatMessage).get_Username(), "Du hast bereits " + (object) Settings.IDCount + " ID (s) in the database!", false);
+              this._client.SendWhisper(((TwitchLibMessage) e.ChatMessage).get_Username(), "You already have " + (object) Settings.IDCount + " ID (s) in the database!", false);
               break;
           }
         case 3:
