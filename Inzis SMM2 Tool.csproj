@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Users\Danie\Downloads\Inzis_SMM2_Tool\Inzis SMM2 Tool.exe-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{15AB4CE4-FF34-4B93-9BCA-27BF168911A0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AssemblyName>Inzis SMM2 Tool</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <ApplicationVersion>1.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Inzis_SMM2_Tool</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="System" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Data" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="_003CModule_003E.cs" />
+    <Compile Include="ProcessedByFody.cs" />
+    <Compile Include="Costura\AssemblyLoader.cs" />
+    <Compile Include="Settings.cs" />
+    <Compile Include="Properties\Resources.cs" />
+    <Compile Include="Properties\Settings.cs" />
+    <Compile Include="SettingsWindow.xaml.cs">
+      <DependentUpon>settingswindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>mainwindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>app.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="costura\controlzex\dll.compressed" />
+    <EmbeddedResource Include="costura\controlzex\pdb.compressed" />
+    <EmbeddedResource Include="costura\costura\dll.compressed" />
+    <EmbeddedResource Include="costura\entityframework\dll.compressed" />
+    <EmbeddedResource Include="costura\entityframework\sqlserver\dll.compressed" />
+    <EmbeddedResource Include="costura\mahapps\metro\dll.compressed" />
+    <EmbeddedResource Include="costura\mahapps\metro\pdb.compressed" />
+    <EmbeddedResource Include="costura\microsoft\extensions\dependencyinjection\abstractions\dll.compressed" />
+    <EmbeddedResource Include="costura\microsoft\extensions\logging\abstractions\dll.compressed" />
+    <EmbeddedResource Include="costura\microsoft\extensions\logging\dll.compressed" />
+    <EmbeddedResource Include="costura\microsoft\extensions\options\dll.compressed" />
+    <EmbeddedResource Include="costura\microsoft\extensions\primitives\dll.compressed" />
+    <EmbeddedResource Include="costura\newtonsoft\json\dll.compressed" />
+    <EmbeddedResource Include="costura\serilog\dll.compressed" />
+    <EmbeddedResource Include="costura\serilog\extensions\logging\dll.compressed" />
+    <EmbeddedResource Include="costura\system\data\sqlite\dll.compressed" />
+    <EmbeddedResource Include="costura\system\data\sqlite\ef6\dll.compressed" />
+    <EmbeddedResource Include="costura\system\data\sqlite\linq\dll.compressed" />
+    <EmbeddedResource Include="costura\system\runtime\compilerservices\unsafe\dll.compressed" />
+    <EmbeddedResource Include="costura\system\windows\interactivity\dll.compressed" />
+    <EmbeddedResource Include="costura\twitchlib\api\core\dll.compressed" />
+    <EmbeddedResource Include="costura\twitchlib\api\core\enums\dll.compressed" />
+    <EmbeddedResource Include="costura\twitchlib\api\core\interfaces\dll.compressed" />
+    <EmbeddedResource Include="costura\twitchlib\api\core\models\dll.compressed" />
+    <EmbeddedResource Include="costura\twitchlib\api\dll.compressed" />
+    <EmbeddedResource Include="costura\twitchlib\api\helix\dll.compressed" />
+    <EmbeddedResource Include="costura\twitchlib\api\helix\models\dll.compressed" />
+    <EmbeddedResource Include="costura\twitchlib\api\v5\dll.compressed" />
+    <EmbeddedResource Include="costura\twitchlib\api\v5\models\dll.compressed" />
+    <EmbeddedResource Include="costura\twitchlib\client\dll.compressed" />
+    <EmbeddedResource Include="costura\twitchlib\client\enums\dll.compressed" />
+    <EmbeddedResource Include="costura\twitchlib\client\models\dll.compressed" />
+    <EmbeddedResource Include="costura\twitchlib\communication\dll.compressed" />
+    <EmbeddedResource Include="costura\twitchlib\pubsub\dll.compressed" />
+    <EmbeddedResource Include="Properties\Resources.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="app.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="mainwindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="settingswindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
